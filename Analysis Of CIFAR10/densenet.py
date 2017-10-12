@@ -99,7 +99,7 @@ class DCNN:
 
     def cnn_model(self,images,dim,label_count,layers,is_training,keep_prob):
         current = tf.reshape(images, [-1, dim[0], dim[1], dim[2]])
-        current = self.pre_process(images=current,training=is_training)
+        #current = self.pre_process(images=current,training=is_training)
         current = self.conv2d(current, 3, 16, 3)
         current, features = self.block(current, layers, 16, 12, is_training, keep_prob)
 
