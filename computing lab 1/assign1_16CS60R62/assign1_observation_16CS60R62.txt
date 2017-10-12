@@ -1,0 +1,17 @@
+Observations:
+
+1. By executing the program on the sample input files provided in serial mode it takes 0.2369 seconds.
+
+2. In parallel mode i.e. k child processes are dividing the work and doing the task in parallel then the time take is greater than what was taken in the serial mode for any value of k > 2.
+
+3. As the value of k is incereased the time taken increases.
+
+Reasons for larger time taken in the second case:
+
+1. Dividing the task i.e. words in the file is divided among different child processes.  
+	
+2. Merging the results of the child processes.
+
+
+
+   

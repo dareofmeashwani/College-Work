@@ -1,0 +1,16 @@
+login to the server:
+ssh <roll-number>@10.4.2.55
+password : roll-number
+
+export HADOOP_HOME="/usr/lib/hadoop/bin"
+export YARN_CONF_DIR = "/etc/hadoop/conf"
+
+chmod a+x mapper.R
+chmod a+x reducer.R
+
+hadoop fs -copyFromLocal <local-path>/wordcount-input.txt <hdfs-path>
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -file mapper.R  -mapper mapper.R -file reducer.R -reducer reducer.R -input /user/<roll-number>/wordcount-input.txt -output /user/<roll-number>/OutputDir
+
+hadoop fs -copyToLocal /user/<roll-number>/OutPutDir <local-path>
+

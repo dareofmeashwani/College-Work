@@ -1,0 +1,44 @@
+1. 
+	a. Fist of all I have used a shared memory between master and each instance of each machine and each shared memory can accessed by slave after getting a lock on the semaphore. Initially all the semaphore are in the locked state i.e. no slave can access it.
+
+	b. Mater has a task queue where there is one element for each type of machine.
+
+	c. At starting the master reads the job from from the file and store it in a job queue. 
+
+	d. Then for each taskqueue element let S be set of jobs whose next task is represented by the taskqueue element:
+
+		i. Transfer as many jobs it can to the shared memory shared between master and the slave that does the job represented by that taskqueue elememt according to that longest wating time first.
+
+		ii. After that it takes forms the queue of the rest of the jobs in S let that taskqueue element point to that queue.
+
+	e. Now it unlocks all the shared memory and waits for SIGUSR1(represents that slave has completed the task).
+
+	f. When SIGUSR1 arrives it checks that which slave has completed the job sets its waiting time to current time and does the following:
+
+		i. If all the jobs are completed then Master detaches all the shared memory and passes SIGQUIT to all the slaves to detach the shared memory, print 
+
+		   the total job summary done by them then exit.
+
+	   	ii. copies the job from the shared memory and whether there is anymore task to do in this job if not then do not do anything. otherwise finds the 
+
+		    taskqueue element that representes the next task to be preformed and checks whether any slave of that task is free if yes then copies this job to 
+
+		    the that shared memory of the slave wose waiting time is highest else add it to the job queue pointed by that taskqueue element. After that it 
+
+		    transfer the jobs from job queue to the to taskqueue according to the next task that is to be performed in the job. It transfer as many jobs in 
+
+		    shared memory as possible then after that makes the queue of the jobs that is pointed by that taskqueue element.
+
+		iii. In Taksqueue element represented by slave if there is any pending job in the queue it finds the highest waiting time slave then copies the job 
+
+		     to the shared memory of that slave.  
+
+2. Master shares a structure whose attributes representes the job that has to be done by them and a semaphore so that slave can access the job only when the master 
+
+   finds a job for that slave and it is correctly copied into the sahred memory.
+
+3. In my implementation the only critical section is part d. and f. in the answer to the first question in that part in which the master takes old job out and puts 
+
+   new job at that time slave cannot access the shared memory. 
+
+4. By using a semaphore variable in the shared memory.

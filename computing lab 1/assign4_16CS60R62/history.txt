@@ -1,0 +1,3 @@
+mypwd
+myls -l
+exit

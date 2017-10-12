@@ -1,0 +1,26 @@
+#! /usr/bin/env Rscript
+
+
+lengths <- function(x) vapply(x,length,1L)
+trim <- function(x)
+{
+  gsub("(^[[:space:]]+|[[:space:]]+$)","", x)
+}
+
+mydata <- read.csv("stdin", strip.white=TRUE, stringsAsFactors=FALSE)
+colnames(mydata) <- c("Artist","Tag","Title","Songid")
+
+mydata <- head(mydata, 700)
+
+mydata$Tag <- NULL
+
+newdata <- c()
+#write("",file = "myfile.txt", append = FALSE)
+for (i in 1:nrow(mydata))
+{
+  l1 <- unlist(strsplit(as.character(mydata[i,1]), split=';', fixed=TRUE))
+  for (j in 1:length(l1))
+  {
+    cat(trim(l1[j]),"#",mydata[i,2],"\n")
+  }
+}

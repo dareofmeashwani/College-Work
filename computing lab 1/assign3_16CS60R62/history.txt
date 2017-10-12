@@ -1,0 +1,15 @@
+mypwd
+myls -l
+exit
+exit
+myls
+exit
+myps
+exit
+myps
+ps
+exit
+ls
+exit
+ls
+lsexit

@@ -1,0 +1,10 @@
+void sigproc(int signal);
+void quitproc(int signals); 
+int main()
+		  printf("fuck't catch SIGUSR1\n");
+		  printf("fuck't catch SIGUSR1\n");
+		 printf("ctrl-c disabled use ctrl-\\ to quit\n");
+void sigproc(int signals)
+		 printf("you have pressed ctrl-c \n");
+void quitproc(int signals)
+{ 		 printf("ctrl-\\ pressed to quit\n");

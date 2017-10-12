@@ -1,0 +1,46 @@
+./master  Sample2-slave.info Sample-job.info 4
+boil  3900
+boil  3901
+wrap  3902
+wrap  3903
+wrap  3904
+mix  3905
+mix  3906
+mix  3907
+freeze  3908
+freeze  3909
+chocolatebar boil:boilmilk7min 3901 6 finished
+vanillaice boil:boilmilk7min 3901 5 finished
+chocolatebar boil:boilmilk7min 3901 4 finished
+vanillaice boil:boilmilk7min 3901 3 finished
+chocolatebar boil:boilmilk7min 3901 2 finished
+vanillaice boil:boilmilk7min 3901 1 finished
+chocolatebar boil:boilmilk7min 3901 0 finished
+vanillaice boil:boilmilk7min 3900 7 finished
+chocolatebar mix:chocolatepowder 3906 0 finished
+vanillaice mix:vanilla 3906 4 finished
+chocolatebar mix:chocolatepowder 3906 3 finished
+vanillaice mix:vanilla 3905 6 finished
+vanillaice boil:heating 3901 0 waiting
+vanillaice boil:heating 3901 0 finished
+chocolatebar mix:chocolatepowder 3907 5 finished
+vanillaice wrap:wrapbar 3903 0 waiting
+vanillaice wrap:wrapbar 3903 0 finished
+chocolatebar boil:heating 3900 0 waiting
+chocolatebar boil:heating 3900 0 finished
+vanillaice mix:vanilla 3906 2 finished
+vanillaice mix:vanilla 3906 0 finished
+vanillaice boil:heating 3900 0 finished
+vanillaice freeze:slow 3908 1 waiting
+vanillaice freeze:slow 3908 1 finished
+chocolatebar freeze:extreme 3908 1 finished
+vanillaice freeze:slow 3909 0 finished
+chocolatebar mix:chocolatepowder 3907 1 finished
+vanillaice boil:heating 3901 0 waiting
+chocolatebar wrap:wrapbar 3903 0 finished
+vanillaice wrap:wrapbar 3902 0 waiting
+vanillaice wrap:wrapbar 3902 0 finished
+vanillaice wrap:wrapbar 3904 1 finished
+vanillaice freeze:slow 3908 0 waiting
+vanillaice freeze:slow 3908 0 finished
+vanillaice boil:heating 3901 0 finished

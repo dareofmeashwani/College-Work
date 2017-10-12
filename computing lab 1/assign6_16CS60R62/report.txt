@@ -1,0 +1,21 @@
+Operation:                 	Time Complexity:
+	
+isEmpty()			O(1) ;In All Cases
+
+Size()				O(n) ;In All Cases
+
+GetMin()			O(1) ;In All Cases
+
+GetMax()			O(1) ;In All Cases
+
+put()				O(log(n)) ;In Worst case while in Best Case : O(1)
+
+BuildDEPQ()			O(n) ;In All Cases
+
+removeMin()			O(log(n)) ;In worst Case But in best Case : O(1)
+
+removeMin()			O(log(n)) ;In worst Case But in best Case : O(1)
+
+IsContain(x)			In worst Case	: O(n)
+				In best Case 	: O(1)
+				In Average Case : O(1)

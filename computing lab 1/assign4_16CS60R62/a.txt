@@ -1,0 +1,20 @@
+jar File
+jr
+Start Command Prompt.
+Navigate to the folder that holds your class files:
+C:\>cd \mywork
+Set path to include JDKs bin.  For example:
+C:\mywork> path java
+Compile your class(es):
+C:\mywork> javac *.java
+Create a manifest file and your jar file:
+C:\mywork> echo Main-Class: Craps >manifest.txt
+C:\mywork> jar cvfm Craps.jar manifest.txt *.class
+or
+C:\mywork> jar cvfe Craps.jar Craps *.class
+Test your jar:
+C:\mywork> Craps.jar
+or
+C:\mywork> java -jar Craps.jar
+jaaaaav
+jav

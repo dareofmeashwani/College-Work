@@ -1,0 +1,51 @@
+digraph Tree { 
+b71caca [label="1851 []" shape=circle ]
+b71caca->b71ca1a
+b71caca->b71cac8
+b71ca1a [label="1774 []" shape=circle ]
+b71ca1a->b71ca18
+b71ca1a->b71ca1e
+b71ca18 [label="1728 []" shape=circle ]
+b71ca18->b71c7fe
+b71ca18->b71ca0a
+b71c7fe [label="1679 []" shape=circle ]
+b71c7fe->b71cacc
+b71c7fe->b71cace
+b71cacc [label="[]" shape=box ]
+b71cace [label="['C4']" shape=box ]
+b71ca0a [label="1743 []" shape=circle ]
+b71ca0a->b71cad0
+b71ca0a->b71cad2
+b71cad0 [label="[]" shape=box ]
+b71cad2 [label="['C3']" shape=box ]
+b71ca1e [label="1807 ['C2']" shape=circle ]
+b71ca1e->b71ca20
+b71ca1e->b71cad4
+b71ca20 [label="1788 ['C3']" shape=circle ]
+b71ca20->b71cad6
+b71ca20->b71cad8
+b71cad6 [label="[]" shape=box ]
+b71cad8 [label="['C1']" shape=box ]
+b71cad4 [label="['C1']" shape=box ]
+b71cac8 [label="1943 []" shape=circle ]
+b71cac8->b71ca54
+b71cac8->b71cac6
+b71ca54 [label="1895 []" shape=circle ]
+b71ca54->b71ca22
+b71ca54->b71cada
+b71ca22 [label="1871 []" shape=circle ]
+b71ca22->b71cadc
+b71ca22->b71cade
+b71cadc [label="['C1']" shape=box ]
+b71cade [label="[]" shape=box ]
+b71cada [label="['C6']" shape=box ]
+b71cac6 [label="1998 []" shape=circle ]
+b71cac6->b71cac4
+b71cac6->b71cae0
+b71cac4 [label="1957 ['C5']" shape=circle ]
+b71cac4->b71cae2
+b71cac4->b71cae4
+b71cae2 [label="['C6']" shape=box ]
+b71cae4 [label="[]" shape=box ]
+b71cae0 [label="[]" shape=box ]
+}

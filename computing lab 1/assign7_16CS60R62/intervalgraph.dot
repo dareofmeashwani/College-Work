@@ -1,0 +1,12 @@
+graph intervalgraph { 
+C1 [label="C1" shape=circle ]
+C1--C2
+C1--C3
+C2 [label="C2" shape=circle ]
+C2--C3
+C3 [label="C3" shape=circle ]
+C4 [label="C4" shape=circle ]
+C5 [label="C5" shape=circle ]
+C5--C6
+C6 [label="C6" shape=circle ]
+}

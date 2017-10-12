@@ -1,0 +1,34 @@
+#! /usr/bin/env Rscript
+
+trimWhiteSpace <- function(line) gsub("(^ +)|( +$)", "", line)
+
+con <- file("stdin", open = "r")
+
+newtable <- c("","")
+while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0) {
+  line <- trimWhiteSpace(line)
+  myentry  <- unlist(strsplit(line,split = "#"))
+  #print(paste(myentry , length(myentry)))
+  newtable <- rbind(newtable,myentry)
+}
+newtable <- as.data.frame(newtable)
+rownames(newtable) <- NULL
+colnames(newtable) <- c("Artist","Title")
+
+newtable <- newtable[!apply(newtable == "",1,all),]
+
+infotable <- aggregate(x=newtable$Title, by = list(Artist = newtable$Artist), FUN = paste, collapse=",")
+
+myenv <- new.env(hash=T, parent=emptyenv())
+for (i in seq(nrow(infotable)))
+{
+  assign(trimWhiteSpace(infotable[i,1]), trimWhiteSpace(infotable[i,2]), myenv)
+}
+
+#myenv[["Charles Brown"]]
+
+for (v in ls(myenv)) {
+  cat(paste(v,"->",myenv[[v]],"\n"))
+}
+
+close(con)
