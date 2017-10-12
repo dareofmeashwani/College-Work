@@ -1,0 +1,41 @@
+1:::Patient table creation ###############(dont use this table)
+
+create table patient(name varchar(100) NOT NULL ,email varchar(100) NOT NULL UNIQUE,dob varchar(12) NOT NULL,gender varchar(8) NOT NULL,address varchar(200) NOT NULL,mobno varchar(15) NOT NULL,password varchar(20) NOT NULL,state varchar(10),temp varchar(40),PRIMARY KEY(email));
+
+2:::account table creation
+create table account(name varchar(100) NOT NULL ,email varchar(100) NOT NULL UNIQUE,dob varchar(12) NOT NULL,type varchar(20) NOT NULL,staffkey varchar(10) NOT NULL,gender varchar(8) NOT NULL,address varchar(200) NOT NULL,mobno varchar(15) NOT NULL,password varchar(20) NOT NULL,state varchar(10),temp varchar(40),PRIMARY KEY(email));
+
+3:::Staff_Key creation
+create table staff_key(email varchar(100) NOT NULL,staffkey varchar(100) NOT NULL,type varchar(20),PRIMARY KEY(email));
+
+4:::staff key specialist
+create table speciality(email varchar(100) NOT NULL,specialization varchar(100) NOT NULL);
+
+5:::appointment table creation
+create table appointment(id varchar(25) NOT NULL,date varchar(12) NOT NULL,time varchar(25) NOT NULL, doctor varchar(100) NOT NULL, patient varchar(100) NOT NULL);
+
+6:::opt table creation
+create table opt(id INT NOT NULL,name varchar(50) NOT NULL, PRIMARY KEY(id));
+
+7:::opt_schedule table creation
+create table opt_schedule(id varchar(25) NOT NULL,date varchar(12) NOT NULL,time varchar(25) NOT NULL, doctor varchar(100) NOT NULL, patient varchar(100) NOT NULL);
+
+8:::slots table creation;
+create table slots(time varchar(25) NOT NULL);
+
+9:::diagnosis table creation
+create table diagnosis(id varchar(25) NOT NULL,patient_email varchar(80)not null,diagnosis varchar(500) Not Null, doctor_email varchar(80) Not NUll);
+
+
+10:::check email exist or not
+select count(email) as c from patient where email="connect2ashwaniverma@gamil.com";
+$sqlquery='select count(email) as c from patient where email="'.$t.'";';
+
+11:::check staffkey exist or not
+select count(m.email) as c from staff m,staff_key n where m.email="connect2ashwaniverma@gamil.com" and m.email=n.email and n.staffkey="HMS00001";
+$sqlquery='select count(m.email) as c from staff m,staff_key n where m.email="'.$e.'" and m.email==n.email and n.staffkey="'.$s.'";';
+
+
+12:::insert data to account table
+$sqlquery='insert into account values("'.$_POST['name'].'","'.$_POST['email'].'","'.$_POST['dob'].'","'.'doctor'.'","'.$_POST['staff_key'].'","'.$_POST['gender'].'","'.$address.'","'.$_POST['mob_no'].'","'.$_POST['s_password'].'","inactive","'.$rand.'");';
+

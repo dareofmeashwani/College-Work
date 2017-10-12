@@ -1,0 +1,412 @@
+body{
+	font-family: arial;
+	font-size: 80%;
+	line-height: 1.2em;
+	width: 100%; margin: 0;
+	background: #eeeEeC;
+}
+/*                                               Header Panel  */
+.hearder{
+	/*width: 1100px;*/
+	float: left;
+	height: 10%;
+	width: 100%;
+	background-color: teal;
+	border: solid 1px silver;
+}
+.logo{
+	margin-top: .25%;
+	margin-bottom: .25%;
+	width: 20%;
+	height: 100%;
+	font-family: georgia;
+	display: inline-block;
+	float: left;
+	text-align: center;
+}
+.title{
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: left;
+	margin-top: 2%;
+	margin-left: 18%;
+}
+.title h1{
+	font-size: 300%;
+}
+.hearder .title a
+{
+	color: lavender;
+}
+.control{
+	width: 39%;
+	height: 100%;
+	float: left;
+}
+.logindiv{
+	width: 75%;
+	height: 50%;
+	float: left;
+	margin-top: 7%;
+	margin-right: 1%;
+	text-align: right;
+}
+.signupdiv{
+	width:20%;
+	height: 50%;
+	float: left;
+	margin-top: 7%;
+	text-align: left;
+}
+.forget{
+	margin-top: 1%;
+	margin-left: 18%;
+	float: left;
+	width: 100%;
+}
+.message{
+	margin-top: 1%;
+	margin-left: 18%;
+	float: left;
+	width: 100%;
+}
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 3px;
+}
+/*                                     Navigation Panel */
+.navigation{
+	width: 100%;
+	float: left;
+}
+.navigation ul {
+	list-style-type: none;
+	margin: 10px;
+
+	padding: 0;
+	overflow: hidden;
+	background-color: #444;
+}
+
+.navigation li {
+	float: left;
+}
+
+.navigation li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 100px;
+	text-decoration: none;
+}
+a:hover:not(.active) {
+	background-color: #111;
+}
+.navigation .home {
+	background-color:#4CAF50;
+}
+.navigation .doctors {
+	background-color:#4CAF50;
+}
+.navigation .aboutus {
+	background-color:#4CAF50;
+}
+.navigation .facilities {
+	background-color:#4CAF50;
+}
+.navigation .contactus {
+	background-color:#4CAF50;
+}
+/*                                    Displap_Noti Panel                        */
+.display_noti {
+	width: 100%;
+	float: left;
+	margin: .5%;
+}
+.display_noti .image_panel{
+	float: left;
+	margin-left: .2%;
+	width: 65%;
+	height: 100%;
+}
+.display_noti .image_panel img{
+	height:600px;
+	width: 100%;
+}
+.mySlides {display:none}
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor:pointer;
+	height: 13px;
+	width: 13px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+}
+.display_noti .noti_panel{
+	float: left;
+	width: 34%;
+	height: 100%;
+}
+.display_noti .noti_panel .noti_panel_top{
+	width: 100%;
+	height: 40%;
+	float: left;
+	text-align: center;
+	font-size: 120%;
+	background-color: #444;
+	color: white;
+}
+.display_noti .noti_panel .noti_panel_top ul li {
+	display: block;
+}
+.display_noti .noti_panel .noti_panel_bottom{
+	width: 100%;
+	float: left;
+}
+/*************************************    footer css  **************************************/
+.footer{
+	background-color: teal;
+	width: 100%;
+	float: left;
+}
+.footer .footer_left{
+	padding-top: 5%;
+	padding-left: 10%;
+	width: 20%;
+	float: left;
+}
+.footer_left li{
+	padding: 2.1%;
+}
+.footer_left li a b {
+	font-size: 200%;
+}
+.footer .footer_centre{
+	padding-top: 5%;
+	width: 33%;
+	float: left;
+}
+.footer_centre li{
+	padding: 1.15%;
+}
+.footer_centre li a b {
+	font-size: 200%;
+}
+.footer .footer_right{
+	padding-top: .5%;
+	width: 33%;
+	float: left;
+	margin-bottom: 1%;
+}
+
+/***************************************                signup css**********************************/
+.image_panel_top{
+	float: left;
+	padding-left: 25%;
+	padding-top: .1%;
+	width: 75%;
+	font-size: 190%;
+	color: #82bcff;
+}
+.image_panel_veri{
+	float: left;
+	padding-left: 20%;
+	padding-top: 5%;
+	width: 50%;
+	height: 100px;
+	font-size: 190%;
+	color: #82bcff;
+}
+.image_panel_left{
+	float: left;
+	padding-top: 3%;
+	padding-left: 15%;
+	font-size: 170%;
+	width: auto;
+}
+.image_panel_right{
+	float: left;
+	padding-top: 3%;
+	padding-left: 2%;
+	width: auto;
+}
+.image_panel_bottom{
+	float: left;
+	padding-top: 1%;
+	padding-left: 30%;
+	width: 65%;
+}
+.signup_top{
+	width: 300px;
+	padding: 5.3px;
+	border: 2px solid black;
+}
+.signup_bottom{
+	width: 300px;
+	padding: 5.3px;
+	border: 2px solid black;
+}
+.display_notid{
+	float: left;
+	padding: 10%;
+	font-size: 170%;
+	line-height: 1.5;
+	width: auto;
+}
+.doctor{
+	padding: 5%;
+	font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+     font-size: 170%;
+        
+}
+.doctor td {
+ border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 27%;
+}
+.doctor th {
+   border: 5px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+    width: 27%;
+}
+
+.doctor tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+.logoutdiv{
+	padding:5%;
+	float: right;
+}
+.accountbar{
+	float: left;
+	width: 6%;
+}
+.accountbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 300%;
+	background-color: #444;
+	font-size: 170%;
+}
+
+.accountbar li a {
+	display: block;
+	display: block;
+	line-height: 300%;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.accountbar li a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.accountbar li a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
+.status{
+	float: right;
+	width: 65%;
+	height: 700px;
+}
+.docoption{
+	width: 18%;
+	height: 15%;
+	font-size: 150%;
+}
+.doctor{
+	width: 120%;
+}
